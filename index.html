@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=11" id="mixia_vpid">
+  <title>SMNET</title>
+  <meta name="keywords" content="SMNET Web"/>
+  <meta name="description" content="SMNET Web" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">    
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+   <body style="background-image: url(images/2.jpg);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;-moz-background-size: cover;">
+  
+
+   <!-- 随机选取背景图片
+<script type="text/javascript">
+  //<!CDATA[
+  var bg = [];
+    bg[0] = 'images/0.jpg';
+    bg[1] = 'images/1.jpg';
+    bg[2] = 'images/2.jpg';
+    bg[3] = 'images/3.jpg';
+    bg[4] = 'images/4.jpg';
+ 
+  var randomBgIndex = Math.round( Math.random() * 4 );
+    document.write('<header class="panel-cover" style="background-image: url(' + bg[randomBgIndex] + ')">');
+   </script>
+-->
+<body>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-bars btn-mobile-menu__icon"></i>
+        <i class="fa fa-chevron-circle-up btn-mobile-close__icon hidden"></i>
+    </span>
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">	    
+        <img src="images/logo.png" width="150" alt="LOGO" class="panel-cover__logo logo">
+        <h1 class="panel-cover__title panel-title">SMNET</h1>
+
+      <span class="panel-cover__subtitle panel-subtitle">
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Make Your Choice</p>
+        <hr class="panel-cover__divider"> 
+        <p class="panel-cover__description">Welcome To SMNET Static Server</p>
+        <p id="client-ip" class="panel-cover__description"></p>
+	      <p class="footer">Security By SMNET CDN</p>	
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a target="_blank" href="https://www.smnet.asia/" >SMNET Studio</a></li>
+                <li class="navigation__item"><a target="_blank" href="https://linux.do/">Linux Do</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cover--overlay cover-slate"></div>
+  </div>
+</header>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+  fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('client-ip').textContent = 'Client IP: ' + data.ip;
+    })
+    .catch(error => {
+      console.error('Error Fetching IP:', error);
+    });
+</script>
+
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261228681'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261228681' type='text/javascript'%3E%3C/script%3E"));</script>
+  </div>
+
+</body>
+</html>
