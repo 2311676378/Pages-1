@@ -1,1 +1,1 @@
-frphb1.chickfrp.com:23332
+http://frphb1.chickfrp.com:23332/
